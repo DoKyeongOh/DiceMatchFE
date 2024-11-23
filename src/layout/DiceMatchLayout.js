@@ -1,15 +1,14 @@
 import React, { Component } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import GameMain from "../diceMatch/game/container/GameMain";
 
 class DiceMatchLayout extends Component {
   render() {
     return (
-      <React.Fragment>
-        <nav style={{ height: "56px" }}>
-          <button>게임 시작</button>
-          <button>로그인</button>
-          <button>회원가입</button>
-        </nav>
-      </React.Fragment>
+      <Routes>
+        <Route path="/game" element={GameMain}></Route>
+      </Routes>
     );
   }
 }

@@ -1,13 +1,13 @@
 import "./App.css";
 import React from "react";
 import DiceMatchLayout from "./layout/DiceMatchLayout.js";
+import Navigation from "./layout/Navigation.js";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
+      <Navigation />
       <DiceMatchLayout />
     </div>
   );
 }
-
-export default App;
