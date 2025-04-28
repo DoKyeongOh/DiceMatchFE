@@ -1,4 +1,10 @@
-export interface BasicAccount {
+export interface BasicRegistrationData {
+  identity: string;
+  password: string;
+  passwordCheck: string;
+}
+
+export interface BasicLoginData {
   identity: string;
   password: string;
 }

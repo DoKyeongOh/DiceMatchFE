@@ -1,3 +1,4 @@
+import { AxiosRequestConfig } from "axios";
 import axiosInstance from "./axios";
 import { ApiResponse, ErrorResponse } from "./types";
 
@@ -15,10 +16,11 @@ export const get = async <T>(
 
 export const post = async <T>(
   url: string,
-  data?: object
+  data?: object,
+  config?: AxiosRequestConfig
 ): Promise<ApiResponse<T>> => {
   try {
-    const response = await axiosInstance.post(url, data);
+    const response = await axiosInstance.post(url, data, config);
     return response.data;
   } catch (error) {
     throw handleError(error);
